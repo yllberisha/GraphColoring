@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" href="./img/graph.png" type="image/png">
+    <title> Coloring Graph</title>
+    <!-- Bootstrap core CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+      integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+      crossorigin="anonymous"
+    />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Include SweetAlert library -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="style/justified-nav.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./style/style.css">
+
+  </head>
+
+  <body>
+ 
+    <div class="container">
+      <div class="row nav">
+        <nav>
+          <a href="./index.html">GRAPH</a>
+          <a href="./sudoku.html">SUDOKU</a>
+          <a href="./about.html">DEMO</a>
+          <div id="indicator"></div>
+        </nav>
+      </div>
+
+      <div class="row mb-3">
+        <h1 class="title">Graph Coloring</h1>
+      </div>
+
+      <div id="info-icon" class="info-icon">&#9432;</div>
+
+      
+      
+      <!-- Main Map Canvas -->
+      <div class="row mb-2" >
+        <div class="col-lg-12">
+          <form>
+            <div class="form-row align-items-center">
+              <div class="col-auto">
+                <input type="reset" id="clearmap" class="btn">
+                <button type="button"  id="startColoring" class="btn blue">Solve</button>
+              </div>
+              <div class="col-auto">
+                <label for="speedSelector" class="label-title" >Speed: </label>
+                <input type="range" name="" id="speedSelector" min="0" max="10">
+              </div>
+
+              <div class="col-auto ml-auto">
+                <label for="algorithmSelector" class="label-title">Select Algorithm:</label>
+                <select id="algorithmSelector" class="custom-select">
+                  <option value="greedy">Greedy Coloring</option>
+                  <option value="dsatur">DSATUR Coloring</option>
+                  <option value="welshPowell">Welsh-Powell Algorithm</option>
+                  <option value="smallestLast">Smallest First Algorithm</option>
+                  <option value="largestFirst">Largest First Algorithm</option>
+                </select>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="row ">
+        <div class="col-lg-12">
+          <div id="svg-map" class="card" style="height: 65vh;">
+          </div>
+          <form class="mt-3">
+            <div class="form-row align-items-center">
+              <div class="col-auto">
+                <button type="button" class="btn export" id="data-export">
+                  Export Data
+                </button>
+              </div>
+              <div class="col-auto">
+
+                <div class="file-input-container">
+                  <input type="file" 
+                  id="data-import"
+                  class="custom-file-input"
+                  />
+                  <label for="fileInput">Import Data</label>
+                </div>
+              </div>
+              <div class="col">
+                <p class="text-right label-title" id="status">Done!</p>
+            </div>
+            </div>
+ 
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+    
+    <!-- /container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+      integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+      integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="js/d3.v3.min.js"></script>
+    
+
+    <script src="js/main.js"></script>
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

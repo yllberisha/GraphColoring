@@ -1,0 +1,254 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #060047;
+  overflow-x: hidden;
+}
+
+.nav {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: end;
+    gap: 10px; 
+}
+
+
+nav {
+
+    /* display: table; */
+  /* margin: 10px; */
+  transform: translateY(-50%);
+
+}
+
+nav a {
+  position: relative;
+  width: 33.333%;
+  display: table-cell;
+  text-align: center;
+  color: #c1cfff;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: 0.2s ease color;
+  
+}
+
+nav a:before,
+nav a:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 0.2s ease transform;
+}
+
+nav a:before {
+  top: 0;
+  left: 10px;
+  width: 6px;
+  height: 6px;
+}
+
+nav a:after {
+  top: 5px;
+  left: 18px;
+  width: 4px;
+  height: 4px;
+}
+
+nav a:nth-child(1):before {
+  background-color: yellow;
+}
+
+nav a:nth-child(1):after {
+  background-color: red;
+}
+
+nav a:nth-child(2):before {
+  background-color: #00e2ff;
+}
+
+nav a:nth-child(2):after {
+  background-color: #89ff00;
+}
+
+nav a:nth-child(3):before {
+  background-color: purple;
+}
+
+nav a:nth-child(3):after {
+  background-color: palevioletred;
+}
+
+#indicator {
+  position: absolute;
+  /* left: 5%; */
+  bottom: 0;
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 5px;
+  transition: 0.2s ease left;
+  display: none;
+}
+
+nav a:hover {
+  color: #fff;
+  text-decoration: none;
+
+}
+
+nav a:hover ~ #indicator  {
+  display: block;
+}
+
+nav a:hover:before,
+nav a:hover:after {
+  transform: scale(1);
+  
+}
+
+nav a:nth-child(1):hover ~ #indicator {
+  background: linear-gradient(130deg, yellow, red);
+}
+
+nav a:nth-child(2):hover ~ #indicator {
+  left: 34%;
+  background: linear-gradient(130deg, #00e2ff, #89ff00);
+}
+
+nav a:nth-child(3):hover ~ #indicator {
+  left: 70%;
+  background: linear-gradient(130deg, purple, palevioletred);
+}
+
+.row h1{
+  margin-top: -50px;
+  margin-bottom: 20px;
+}
+
+.title{
+  color: #E90064;
+
+}
+.label-title{
+  color: #c1cfff;
+  margin-right: 5px;
+}
+
+.custom-select{
+  color: #c1cfff;
+  /* width: 200px; Adjust the width as needed */
+  /* padding: 20px; */
+  /* font-size: 14px; */
+  /* border-radius: 5px; */
+  border-bottom: 4px solid #E90064;
+  background-color: transparent;
+}
+
+.custom-select option {
+  background-color: #fff; /* Background color of options */
+  color: #0e6c97; /* Text color of options */
+  padding: 10px;
+  border-radius: 4px;
+}
+
+
+::-webkit-scrollbar {
+  width: 12px; /* width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* color of the thumb */
+  border-radius: 6px; /* roundness of the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* color of the thumb on hover */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #eee; /* color of the track */
+}
+
+.blue , .file-input-container {
+  background-color:transparent;
+  color: #c1cfff;
+  border: 2px solid #c1cfff;
+  border-radius: 0 15px 15px 0  ;
+  padding: 8px;
+  width: 80px;
+}
+
+.blue:hover , .file-input-container:hover {
+  background-color: #06376f;
+  background-color: #2a51dd;
+
+  color: #fff;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+
+input[type="reset"], .export{
+  background-color:transparent;
+  color: #E90064;
+  border: 2px solid #E90064;
+  border-radius: 15px 0px 0px 15px  ;
+  padding: 8px ;
+  width: 80px;
+  margin-right: 4px;
+  
+}
+
+input[type="reset"]:hover , .export:hover{
+  background-color: #E90064;
+  color: #fff;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.export{
+  width: 120px;
+  border: 2px solid #00e952;
+  color: #00e952;
+}
+.export:hover{
+  background-color: #00e952b9;
+
+}
+
+.file-input-container {
+  width: 160px;
+  height: 40px;
+  padding: 6px 15px;
+}
+
+.file-input-container input[type="file"] {
+  position: absolute;
+  opacity: 0;
+}
+
+
+.info-icon {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 9999;
+  color: #E90064;
+}
+
+.graph-icon i,
+.node-icon i,
+.edge-icon i {
+    margin: 5px;
+    color: #E90064;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" href="./img/graph.png" type="image/png">
+  <title> Coloring Graph</title>
+       <!-- Bootstrap core CSS -->
+       <link
+       rel="stylesheet"
+       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+       integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+       crossorigin="anonymous"
+     />
+<!-- Include SweetAlert library -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <link rel="stylesheet" type="text/css" href="./style/sudoku.css">
+    <link rel="stylesheet" href="style/justified-nav.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div class="container">
+      <div class="row nav">
+        <nav>
+          <a href="./index.html">GRAPH</a>
+          <a href="./sudoku.html">SUDOKU</a>
+          <a href="./about.html">DEMO</a>
+          <div id="indicator"></div>
+        </nav>
+      </div>
+      
+      
+
+      <div class="row">
+        <h1 class="title">Sudoku With Graph Coloring</h1>
+      </div>
+      <div class="row">
+
+      <div class="col-lg-4 col-sm-12 p-3">
+     
+       <label for="size" class="label-title">Size: </label>
+        <select name="size" id="size" class="custom-select mb-2 mr-sm-2 mb-sm-0">
+          <option value="9">9x9</option>
+          <option value="4">4x4</option>
+        </select>
+        <div class="sudoku">
+            <table>
+                <tbody class="sudoku-grid">
+                    <!-- Content will be added dynamically using JavaScript -->
+                </tbody>
+            </table>
+        </div>
+        <input type="reset" id="reset" class="btn">
+        <button id="solveButton" class="btn blue">Solve</button>
+      </div>
+      
+        <div class="col-1"></div>
+
+        <div class="col-lg-7 col-sm-12 p-3" id="sodukoGraphdiv">
+              <form>
+                <div class="form-row align-items-center">
+                 
+                  <div class="col-auto">
+                    <label for="speedSelector" class="label-title" >Speed: </label>
+                    <input type="range" name="" id="speedSelector" min="0" max="10">
+                  </div>
+         
+                </div>
+              </form>
+         
+        
+        
+              <div id="svg-map"  class="card">
+               
+              </div>
+            </div>
+          </div>
+        </div>
+
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+    integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+    crossorigin="anonymous"
+    ></script>
+
+    <script type="text/javascript" src="js/d3.v3.min.js"></script>
+
+    <script src="./js/sudokuGraphSolving.js"></script>
+    <script src="./js/sudoku.js"></script>
+
+</body>
+</html>
