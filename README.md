@@ -1,6 +1,8 @@
 # Graph Coloring & Sudoku Solver App
 This application provides an interactive platform to create, visualize, and explore different graph coloring algorithms. Additionally, it allows you to solve Sudoku puzzles using graph coloring techniques.
 
+Try it out at: https://yllberisha.github.io/GraphColoring/
+
 ## Features
 ### Graph Creation and Visualization
  - **Graph Creation**: Easily create graphs by adding vertices and edges.
